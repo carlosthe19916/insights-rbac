@@ -9,5 +9,5 @@ RUN pipenv run pipenv_to_requirements -f
 RUN pip install -r requirements.txt
 USER root
 
-ADD run_server.sh
-ENTRYPOINT ["run_server.sh"]
+ADD run_server.sh /opt/app-root/src/run_server.sh
+ENTRYPOINT ["/opt/app-root/src/run_server.sh"]
