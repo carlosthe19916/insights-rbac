@@ -25,16 +25,8 @@ stages:
             inputs:
               containerRegistry: 'DockerHub'
               repository: 'carlosthe19916/insights-rbac'
-              command: 'build'
+              command: 'buildAndPush'
               Dockerfile: '**/Dockerfile-analytics'
-              tags: |
-                $(Build.BuildNumber)
-                latest
-          - task: Docker@2
-            inputs:
-              containerRegistry: 'DockerHub'
-              repository: 'carlosthe19916/insights-rbac-mock'
-              command: 'push'
               tags: |
                 $(Build.BuildNumber)
                 latest
