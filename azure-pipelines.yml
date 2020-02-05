@@ -2,7 +2,7 @@ trigger:
   batch: true
   branches:
     include:
-      - master
+      - migration-analytics
   tags:
     include:
       - '*'
@@ -10,7 +10,7 @@ trigger:
 pr:
   branches:
     include:
-      - master
+      - migration-analytics
 
 stages:
   - stage: DockerHub
